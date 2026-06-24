@@ -36,3 +36,7 @@
 
 - Updated Getting Started Guide with instructions to disable SIA Reporting encryption in alarm panel as SIA2MQTT4HA doesn't current support encrypted comms.
 - Added error handling if messages that cannot be parsed (e.g. due to encryption) are received.
+
+## 0.2.2
+
+- Update to get local time in the logs.
