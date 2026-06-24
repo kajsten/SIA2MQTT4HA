@@ -39,4 +39,4 @@
 
 ## 0.2.2
 
-- Update to get local time in the logs.
+- Update to get local time in the logs. Change the value in src/utils.ts to the correct time zone.
