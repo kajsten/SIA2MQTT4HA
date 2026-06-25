@@ -4,7 +4,7 @@
 
 Galaxy Flex Alarm Panel SIA to MQTT server for Home Assistant
 
-This package is based on work from https://github.com/dklemm/FlexSIA2MQTT.git
+This package is based on work from https://github.com/666djb/SIA2MQTT4HA which is based on https://github.com/dklemm/FlexSIA2MQTT.git
 
 I have modified the FlexSIA2MQTT package to better suit my needs:
 * It can be installed as an add-on in Home Assistant or run standalone
