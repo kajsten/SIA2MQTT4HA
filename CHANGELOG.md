@@ -40,3 +40,7 @@
 ## 0.2.2
 
 - Update to get local time in the logs. Change the value in src/utils.ts to the correct time zone.
+
+## 0.2.3
+
+- Change encoding from utf8 to latin1 in src/sia/siaBlock.ts
