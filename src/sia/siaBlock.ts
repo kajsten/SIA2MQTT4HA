@@ -5,6 +5,14 @@ const HEADER_LENGTH = 2
 const PACKING_LENGTH = HEADER_LENGTH + 1
 const CHECK_OFFSET = 0x40
 
+const CP850_SV: { [byte: number]: string } = {
+    0x8E: 'Ä', 0x84: 'ä', 0x8F: 'Å', 0x86: 'å', 0x99: 'Ö', 0x94: 'ö'
+}
+
+function decodeText(buf: Buffer): string {
+    return Array.from(buf).map(b => CP850_SV[b] ?? String.fromCharCode(b)).join('')
+}
+
 export class SIABlock {
 
     constructor(public funcCode: FunctionCodes, public data: string) {
@@ -38,8 +46,8 @@ export class SIABlock {
         try {
             const dataLength = this.checkParity(buffer)
             const funcCode = buffer[1]
-            const data = buffer.toString('latin1', HEADER_LENGTH, HEADER_LENGTH + dataLength)
-
+            const data = decodeText(buffer.subarray(HEADER_LENGTH, HEADER_LENGTH + dataLength))
+            
             return new SIABlock(funcCode, data)
         } catch (error) {
             throw error
