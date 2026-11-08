@@ -52,3 +52,7 @@
 ## 0.2.5
 
 - Change in utilis.ts to 24h
+
+## 0.2.6
+
+- Minor corrections
