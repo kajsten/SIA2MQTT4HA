@@ -38,7 +38,7 @@ export class SIABlock {
         try {
             const dataLength = this.checkParity(buffer)
             const funcCode = buffer[1]
-            const data = buffer.toString('utf8', HEADER_LENGTH, HEADER_LENGTH + dataLength)
+            const data = buffer.toString('latin1', HEADER_LENGTH, HEADER_LENGTH + dataLength)
 
             return new SIABlock(funcCode, data)
         } catch (error) {
