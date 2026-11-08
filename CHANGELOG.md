@@ -46,4 +46,9 @@
 - Change encoding from utf8 to latin1 in src/sia/siaBlock.ts
 
 ## 0.2.4
+
 - Change for handling Swedish characters in src/sia/siaBlock.ts
+
+## 0.2.5
+
+- Change in utilis.ts to 24h
